@@ -1,0 +1,66 @@
+@import '~sass/variables';
+.nav-container {
+    background-color: $background-color-active;
+    width: $main-width;
+    color: $inactive-text;
+    .nav-header {
+        padding: $main-padding;
+        background-color: $background-color-light;
+        margin-bottom: 1px;
+        text-align: center;
+        img {
+            width: ($main-width - ($main-padding * 2)) - 25px;
+            vertical-align: middle;
+        }
+    }
+    .tab {
+        background-color: $background-color-dark;
+        font-family: $category-font;
+        font-size: $category-font-size;
+        .tab-header {
+            padding: 15px;
+            vertical-align: middle;
+            p {
+                display: inline-block;
+                margin: 0px;
+            }
+            img {
+                vertical-align: middle;
+                height: 24px;
+                margin-right: 25px;
+                filter: brightness(60%);
+            }
+            i {
+                vertical-align: middle;
+                float: right;
+                transform: rotate(0deg);
+                transition: linear .2s;
+                clear: both;               
+            }
+        }
+        .tab-content {
+            background-color: $background-color-active;
+            padding: 5px 15px;
+            font-size: $content-font-size;
+            p {
+                vertical-align: middle;
+                margin-left: 55px;
+            }
+            img {
+                position: relative;
+                vertical-align: middle;
+                filter: brightness(60%);
+                float: right;
+            } 
+            .inner-tab-content:hover {
+                color: $active-text;
+            }
+            .inner-tab-content:hover img {
+                filter: brightness(100%);
+            }
+        }
+        .tab-header:hover {
+            background-color: $background-color-hover;
+        }
+    }
+}

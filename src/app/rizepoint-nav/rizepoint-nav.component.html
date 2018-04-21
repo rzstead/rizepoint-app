@@ -1,0 +1,101 @@
+<div class="nav-container">
+  <div class="nav-header">
+    <img src="../../assets/images/logo.png">
+  </div>
+  <div class="tab-container">
+    <div class="tab">
+      <div class="tab-header" (click)="toggleTab(1)" [ngStyle]="{color:getActive(1)}">
+        <img src="../../assets/images/define.png" [ngStyle]="{filter:getFilter(1)}">
+        <p>Define</p>
+        <i class="material-icons" [ngStyle]="{transform: getTransform(1)}">keyboard_arrow_down</i>
+      </div>
+      <div *ngIf="getToggled(1)" class="tab-content" [@slideOpenClosed]>
+        <div class="inner-tab-content">
+          <p>Add Definition</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Lookup</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Retrieve</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tab-header" (click)="toggleTab(2)" [ngStyle]="{color:getActive(2)}">
+        <img src="../../assets/images/gather.png" [ngStyle]="{filter:getFilter(2)}">
+        <p>Gather</p>
+        <i class="material-icons"
+         [ngStyle]="{transform: getTransform(2)}">keyboard_arrow_down</i>
+      </div>
+      <div *ngIf="getToggled(2)" [@slideOpenClosed] class="tab-content">
+        <div class="inner-tab-content">
+          <p>Forms</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Audit Results <img src="../../assets/images/arrow.png"></p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Legacy Forms <img src="../../assets/images/arrow.png"></p>  
+        </div>
+        <div class="inner-tab-content">
+          <p>Print Blank Form</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tab-header" (click)="toggleTab(3)" [ngStyle]="{color:getActive(3)}">
+        <img src="../../assets/images/see.png" [ngStyle]="{filter:getFilter(3)}">
+        <p>See</p>
+        <i class="material-icons" [ngStyle]="{transform: getTransform(3)}">keyboard_arrow_down</i>
+      </div>
+      <div *ngIf="getToggled(3)" [@slideOpenClosed] class="tab-content">
+        <div class="inner-tab-content">
+          <p>Analytics</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Insights</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Dataset</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tab-header" (click)="toggleTab(4)" [ngStyle]="{color:getActive(4)}">
+        <img src="../../assets/images/act.png" [ngStyle]="{filter:getFilter(4)}">
+        <p>Act</p>
+        <i class="material-icons" [ngStyle]="{transform: getTransform(4)}">keyboard_arrow_down</i>
+      </div>
+      <div *ngIf="getToggled(4)" [@slideOpenClosed] class="tab-content">
+        <div class="inner-tab-content">
+          <p>Reconcile</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Access</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Review</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tab-header" (click)="toggleTab(5)" [ngStyle]="{color:getActive(5)}">
+        <img src="../../assets/images/admin.png" [ngStyle]="{filter:getFilter(5)}">
+        <p>Admin</p>
+        <i class="material-icons" [ngStyle]="{transform: getTransform(5)}">keyboard_arrow_down</i>
+      </div>
+      <div *ngIf="getToggled(5)" [@slideOpenClosed] class="tab-content">
+        <div class="inner-tab-content">
+          <p>Log</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Write</p>
+        </div>
+        <div class="inner-tab-content">
+          <p>Remove</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
