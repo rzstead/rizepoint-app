@@ -11,27 +11,39 @@ import { DrawerHeaderComponent } from '../drawer-header/drawer-header.component'
 export class DrawerItemComponent {
 
   protected toggled: boolean;
+  @ContentChildren(DrawerItemComponent) contentChildren: DrawerItemComponent[];
   @Input() title;
 
 
-  public getTransform(id: string): string {
+  public getTransform(): string {
     return this.toggled ? 'rotate(180deg)' : 'rotate(0deg)';
   }
 
-  public getActive(id: string): string {
+  public getActive(): string {
     return this.toggled ? '#FFF' : '#999';
   }
 
-  public getVisibility(id: string): string {
+  public getVisibility(): string {
     return this.toggled ? '{opacity: 1;}{visibility:visible;}' : '{opacity: 0;}{visibility:hidden;}';
   }
 
-  public getFilter(id: string): string {
+  public getFilter(): string {
     return this.toggled ? 'brightness(100%)' : 'brightness(60%)';
   }
 
   public toggleTab() {
     this.toggled = !this.toggled;
+    if (!this.toggled) {
+      this.contentChildren.forEach(child => {
+        console.log(child)
+          child.toggleTab();
+      });
+    }
+
+  }
+
+  public hasChildren() {
+    return this.contentChildren.length > 0;
   }
 
 }

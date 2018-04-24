@@ -34,7 +34,6 @@ export class DrawerHeaderComponent extends DrawerItemComponent{
   
   @Input() headerTitle: string;
   @Input() headerImage: string;
-  @Input () className: string;
   constructor(){
     super();
   }

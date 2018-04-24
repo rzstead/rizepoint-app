@@ -1,8 +1,8 @@
 <div class="tab-header" (click)="toggleTab()" [ngStyle]="{color:getActive()}">
   <img src={{headerImage}} [ngStyle]="{filter:getFilter()}">
   <p>{{headerTitle}}</p>
-  <i class="material-icons" [ngStyle]="{'transform': getTransform()}">keyboard_arrow_down</i>
+  <i *ngIf="hasChildren()" class="material-icons" [ngStyle]="{'transform': getTransform()}">keyboard_arrow_down</i>
 </div>
-<div class="tab-content" *ngIf="toggled" [@slideOpenClosed]>
+<div class="tab-content" *ngIf="hasChildren() && toggled" [@slideOpenClosed]>
   <ng-content></ng-content>
 </div>
