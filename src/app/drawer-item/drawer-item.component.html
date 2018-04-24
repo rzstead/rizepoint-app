@@ -1,5 +1,9 @@
-<div class="inner-tab-content">
+<div class="tab-header" (click)="toggleTab()" [ngStyle]="{color:getActive()}">
+  <img src={{image}} [ngStyle]="{filter:getFilter()}">
   <p>{{title}}</p>
-  <ng-content></ng-content> 
+  <i *ngIf="hasChildren()" class="material-icons" [ngStyle]="{'transform': getTransform()}">keyboard_arrow_down</i>
+</div>
+<div class="tab-content" *ngIf="hasChildren() && toggled" [@slideOpenClosed]>
+  <ng-content></ng-content>
 </div>
 

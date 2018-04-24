@@ -1,18 +1,36 @@
 @import '~sass/variables';
-.inner-tab-content {
-  p {
+.tab-header {
+    padding: 15px;
     vertical-align: middle;
-    margin-left: 45px;
-  }
-  i {
-    position: relative;
-    vertical-align: middle;
-    filter: brightness(60%);
-    float: right;
-    clear: both;
-  }
+    p {
+        display: inline-block;
+        margin: 0px;
+    }
+    img {
+        vertical-align: middle;
+        height: 24px;
+        margin-right: 25px;
+        filter: brightness(60%);
+    }
+    i {
+        vertical-align: middle;
+        float: right;
+        transform: rotate(0deg);
+        transition: linear .2s;
+        clear: both;
+    }
 }
 
-.inner-tab-content:hover {
-  color: $active-text;
+.tab-header:hover {
+    background-color: $background-color-hover;
+}
+
+.tab-content {
+    background-color: $background-color-active;
+    padding: 5px 25px;
+    font-size: $content-font-size;
+}
+
+.tab-content:hover{
+  color:white;
 }

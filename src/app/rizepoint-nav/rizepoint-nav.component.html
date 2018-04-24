@@ -2,35 +2,30 @@
   <div class="nav-header">
     <img src="../../assets/images/logo.png">
   </div>
-  <drawer-header class="tab" [headerImage]="'../../assets/images/define.png'" [headerTitle]="'Define'">
-    <drawer-item class="inner-tab-content" [title]="'Add Definitions'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Lookup'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Retrieve'"></drawer-item>
-  </drawer-header>
-  <drawer-header class="tab" [headerImage]="'../../assets/images/gather.png'" [headerTitle]="'Gather'">
-    <drawer-item class="inner-tab-content" [title]="'Add Definitions'"></drawer-item>
-    <drawer-header [className]="'inner-tab-content'" [headerTitle]="'Audit Results'">
-      <drawer-item class="inner-tab-content" [title]="'Results'"></drawer-item>
-    </drawer-header>
-    <drawer-header [className]="'inner-tab-content'" [headerTitle]="'Legacy Forms'">
-      <drawer-item class="inner-tab-content" [title]="'Form 1'"></drawer-item>
-      <drawer-item class="inner-tab-content" [title]="'Form 2'"></drawer-item>      
-    </drawer-header>
-    <drawer-item class="inner-tab-content" [title]="'Blank Form'"></drawer-item>
-  </drawer-header>
-  <drawer-header class="tab" [headerImage]="'../../assets/images/see.png'" [headerTitle]="'See'">
-    <drawer-item class="inner-tab-content" [title]="'Analytics'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Insights'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Dataset'"></drawer-item>  
-  </drawer-header>
-  <drawer-header class="tab" [headerImage]="'../../assets/images/act.png'" [headerTitle]="'Act'">
-    <drawer-item class="inner-tab-content" [title]="'Reconcile'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Access'"></drawer-item>
-    <drawer-item class="inner-tab-content" [title]="'Review'"></drawer-item>    
-  </drawer-header>
-  <drawer-header class="tab" [headerImage]="'../../assets/images/admin.png'" [headerTitle]="'Admin'">
-    <drawer-item class="inner-tab-content" [title]="'Log'"></drawer-item>  
-    <drawer-item class="inner-tab-content" [title]="'Write'"></drawer-item>  
-    <drawer-item class="inner-tab-content" [title]="'Remove'"></drawer-item>  
-  </drawer-header>
+  <drawer-item class="tab" [image]="'../../assets/images/define.png'" [title]="'Define'">
+    <drawer-item [title]="'Add Definitions'"></drawer-item>
+    <drawer-item [title]="'Lookup'"></drawer-item>
+    <drawer-item [title]="'Retrieve'"></drawer-item>
+  </drawer-item>
+  <drawer-item class="tab" [image]="'../../assets/images/gather.png'" [title]="'Gather'">
+    <drawer-item [title]="'Add Definitions'"></drawer-item>
+    <drawer-item [className]="'inner-tab-content'" [title]="'Audit Results'"></drawer-item>
+    <drawer-item [className]="'inner-tab-content'" [title]="'Legacy Forms'"></drawer-item>
+    <drawer-item [title]="'Blank Form'"></drawer-item>
+  </drawer-item>
+  <drawer-item class="tab" [image]="'../../assets/images/see.png'" [title]="'See'">
+    <drawer-item [title]="'Analytics'"></drawer-item>
+    <drawer-item [title]="'Insights'"></drawer-item>
+    <drawer-item [title]="'Dataset'"></drawer-item>
+  </drawer-item>
+  <drawer-item class="tab" [image]="'../../assets/images/act.png'" [title]="'Act'">
+    <drawer-item [title]="'Reconcile'"></drawer-item>
+    <drawer-item [title]="'Access'"></drawer-item>
+    <drawer-item [title]="'Review'"></drawer-item>
+  </drawer-item>
+  <drawer-item class="tab" [image]="'../../assets/images/admin.png'" [title]="'Admin'">
+    <drawer-item [title]="'Log'"></drawer-item>
+    <drawer-item [title]="'Write'"></drawer-item>
+    <drawer-item [title]="'Remove'"></drawer-item>
+  </drawer-item>
 </div>

@@ -1,18 +1,41 @@
 import { Component, OnInit, ViewChildren, ContentChildren, QueryList, Input } from '@angular/core';
+import { trigger, transition, query, style, group, animate } from '@angular/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { DrawerHeaderComponent } from '../drawer-header/drawer-header.component';
 
 @Component({
   selector: 'drawer-item',
   templateUrl: './drawer-item.component.html',
-  styleUrls: ['./drawer-item.component.scss']
+  styleUrls: ['./drawer-item.component.scss'],
+  animations: [
+    trigger('slideOpenClosed', [
+      transition(':enter', [
+        query('p, img', style({ opacity: 0, height: '0px' })),
+        style({ height: '0px' }),
+        group([
+          query('p, i', [
+            animate('.1s ease-in')
+          ]),
+          animate('.2s linear')
+        ]),
+      ]),
+      transition(':leave', [
+        group([
+          query('p, i', [
+            animate('.1s ease-in', style({ opacity: 0, height: '0px' }))
+          ]),
+          animate('.2s ease-in', style({ height: '0px' }))
+        ])
+      ])
+    ])
+  ]
 })
 
 export class DrawerItemComponent {
 
   protected toggled: boolean;
   @ContentChildren(DrawerItemComponent) contentChildren: DrawerItemComponent[];
-  @Input() title;
+  @Input() title: string;
+  @Input() image: string;
 
 
   public getTransform(): string {
@@ -33,17 +56,10 @@ export class DrawerItemComponent {
 
   public toggleTab() {
     this.toggled = !this.toggled;
-    if (!this.toggled) {
-      this.contentChildren.forEach(child => {
-        console.log(child)
-          child.toggleTab();
-      });
-    }
-
   }
 
   public hasChildren() {
-    return this.contentChildren.length > 0;
+    return this.contentChildren.length > 1;
   }
 
 }
