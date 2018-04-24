@@ -1,0 +1,32 @@
+@import '~sass/variables';
+@import '~sass/_inner-tab';
+.tab-header {
+  padding: 15px;
+  vertical-align: middle;
+  p {
+    display: inline-block;
+    margin: 0px;
+  }
+  img {
+    vertical-align: middle;
+    height: 24px;
+    margin-right: 25px;
+    filter: brightness(60%);
+  }
+  i {
+    vertical-align: middle;
+    float: right;
+    transform: rotate(0deg);
+    transition: linear .2s;
+    clear: both;
+  }
+}
+.tab-header:hover {
+  background-color: $background-color-hover;
+}
+.tab-content {
+  background-color: $background-color-active;
+  padding: 5px 15px;
+  font-size: $content-font-size;
+}
+

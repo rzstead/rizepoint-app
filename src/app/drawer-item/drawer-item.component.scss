@@ -1,0 +1,18 @@
+@import '~sass/variables';
+.inner-tab-content {
+  p {
+    vertical-align: middle;
+    margin-left: 45px;
+  }
+  i {
+    position: relative;
+    vertical-align: middle;
+    filter: brightness(60%);
+    float: right;
+    clear: both;
+  }
+}
+
+.inner-tab-content:hover {
+  color: $active-text;
+}
